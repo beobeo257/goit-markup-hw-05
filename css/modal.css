@@ -11,6 +11,7 @@
   justify-content: center;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -37,6 +38,21 @@
   position: absolute;
   top: 24px;
   right: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:focus,
+.close-button:hover {
+  background-color: #404bbf;
+}
+.close-button:focus .close-icon,
+.close-button:hover .close-icon {
+  fill: #ffffff;
 }
 
 .modal-discription {
@@ -70,7 +86,7 @@
   max-width: 360px;
   min-height: 40px;
   margin-top: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input:hover,
@@ -106,7 +122,10 @@
   outline: none;
   margin-top: 4px;
   resize: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
 .form-comment:hover,
@@ -163,11 +182,11 @@
 }
 
 .policy:checked + .policy-label .custom-checkbox {
-  background-color: #4d5ae5;
+  background-color: #404bbf;
 }
 
 .policy:focus + .policy-label .custom-checkbox {
-  border-color: #4d5ae5;
+  border-color: #404bbf;
 }
 
 .policy:checked + .policy-label .custom-checkbox .check-mark {
@@ -186,7 +205,13 @@
   letter-spacing: 0.04em;
   color: #ffffff;
   margin-top: 24px;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-submit:focus,
+.button-submit:hover {
+  background-color: #404bbf;
 }
 
 .button-submit-container {
@@ -197,4 +222,5 @@
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
