@@ -104,7 +104,7 @@
 }
 
 .input:hover + .model-icons,
-.input:focus-within + .model-icons {
+.input:focus + .model-icons {
   fill: #4d5ae5;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .policy-accent {
-  line-height: 1.33;
+  line-height: 1.17;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
@@ -199,6 +199,7 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   border: none;
+  width: 169px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
